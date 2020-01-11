@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Form</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <h1>Billing Information</h1>
+       <form id="payment">
+           <fieldset id="billing">
+               <legend>Billing Information</legend>
+               <label for="firstBox">First Name</label>
+               <input type="text" required name="fName" id="firstBox">
+               <label for="streetBox">Street Address</label>
+               <input type="text" required name="street" id="lastBox">
+               <label for="cityBox">City</label>
+               <input type="text" required name="city" id="cityBox">
+               <label for="stateBox">State</label>
+               <input list="stateList" name="state" id="stateBox" >
+               <datalist id="stateList">
+                   <option value="AL">
+                   <option value="AK">
+                   <option value="AZ">
+                   <option value="AR">
+                   <option value="CA">
+                   <option value="CO">
+                   <option value="CT">
+                   <option value="DE">
+                   <option value="FL">
+                   <option value="GA">
+                   <option value="HI">
+                   <option value="ID">
+                   <option value="IL">
+                   <option value="IL">
+                   <option value="IN">
+                   <option value="IA">
+                   <option value="KS">
+                   <option value="KY">
+                   <option value="LA">
+                   <option value="ME">
+                   <option value="MD">
+                   <option value="MA">
+                   <option value="MI">
+                   <option value="MN">
+                   <option value="MS">
+                   <option value="MO">
+                   <option value="MT">
+                   <option value="NE">
+                   <option value="NV">
+                   <option value="NH">
+                   <option value="NJ">
+                   <option value="NM">
+                   <option value="NY">
+                   <option value="NC">
+                   <option value="ND">
+                   <option value="OH">
+                   <option value="OK">
+                   <option value="OR">
+                   <option value="PA">
+                   <option value="RI">
+                   <option value="SC">
+                   <option value="SD">
+                   <option value="TN">
+                   <option value="TX">
+                   <option value="UT">
+                   <option value="VT">
+                   <option value="VA">
+                   <option value="WA">
+                   <option value="WV">     
+                   <option value="WI">
+                   <option value="WY">
+               </datalist>
+               <label for="zipBox">ZIP/Postal Code</label>
+               <input type="text" required name="zip" id="zipBox" pattern="^\d{5}(\-\d{4})?$">
+               <label for="countryBox">Country</label>
+               <input type="text" required name="country" id="countryBox" value="United States">
+               <label for="phoneBox">Phone</label>
+               <input type="tel" name="phone" id="phoneBox" pattern="$\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s]?\d{4}$">
+           </fieldset>
+           <fieldset id="creditCard">
+               <legend>Credit Card</legend>
+               <fieldset>
+                   <label class="cardLabel">
+                        <input type="radio" name="eCard" value="amex" required>
+                        <img src="amex.png" alt="American Express">
+                   </label>
+                   <label class="cardLabel">
+                        <input type="radio" name="eCard" value="discover" required>
+                        <img src="discover.png" alt="Discover">
+                   </label>
+                   <label class="cardLabel">
+                       <input type="radio" name="eCard" value="master" required>
+                       <img src="master.png" alt="Master Card">
+
+                   </label>
+                   <label class="cardLabel">
+                       <input type="radio" name="eCard" value="visa" required>
+                       <img src="visa.png" alt="Visa">
+                   </label>
+                   <label for="cardBox">Credit Card Number</label>
+                   <input type="text" required name="cardNumber" id="cardBox" pattern="‘(?:4[0-9]{12}(?:[0-9]{3})?|5[1-
+                   5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-
+                   9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})">
+                   <label for="monthList">Expiration Date</label>
+                   <select name="cardMonth" id="monthList" required>
+                       <option value="“ ”,Month">
+                       <option value="“01”, January (01)">
+                       <option value="“02”, February (02)">
+                       <option value="“03”, March (03)">
+                       <option value="“04”, April (04)">
+                       <option value="“05”, May (05)">
+                       <option value="“06”, June (06)">
+                       <option value="“07”, July (07) ">
+                       <option value="“08”, August (08)">
+                       <option value="“09”, September (09)">
+                       <option value="“10”, October (10)">
+                       <option value="“11”, November (11)">
+                       <option value="“12”, December (12)">
+                   </select>
+                   <select name="cardYear" id="yearList" required>
+                       <option value="“ ”, Year">
+                       <option value="“2019”, 2019">
+                       <option value="“2020”, 2020">
+                       <option value="“2021”, 2021">
+                       <option value="“2022”, 2022">
+                   </select>
+                   <label for="cscBox">CSC</label>
+                   <input type="text" name="csc" id="csc" value="cscBox" maxlength="3" placeholder="nnn" pattern="^\d{3}$">
+               </fieldset>
+           </fieldset>
+           <div id="btn">
+               <input type="button" value="Submit Payment Information">
+           </div>
+       </form>
+    </section>
+  
+</body>
+</html>
